@@ -38,12 +38,30 @@ binary_sensor:
     on_press:
       then:
         - switch.toggle: switch_1
+  
+  - platform: gpio
+    pin:
+      number: GPIO9
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    id: button_2
+    on_press:
+      then:
+        - switch.toggle: switch_2
 
 switch:
   - platform: gpio
-    name: "Switch"
+    name: "Switch 1"
     id: switch_1
     pin: GPIO12
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  - platform: gpio
+    name: "Switch 2"
+    id: switch_2
+    pin: GPIO5
     restore_mode: RESTORE_DEFAULT_OFF
 
 status_led:

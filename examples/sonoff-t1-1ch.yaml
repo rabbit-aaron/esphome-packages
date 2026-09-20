@@ -1,0 +1,13 @@
+substitutions:
+  device_name: bed-3-light
+  friendly_name: bed-3-light
+  encryption_key: !secret bed_3_light__encryption_key
+  ap_password: !secret bed_3_light__ap_password
+
+packages:
+  sonoff_t1_1ch:
+    url: https://github.com/rabbit-aaron/esphome-packages
+    ref: main
+    files:
+      - packages/sonoff-t1-1ch.yaml
+    refresh: 1d
