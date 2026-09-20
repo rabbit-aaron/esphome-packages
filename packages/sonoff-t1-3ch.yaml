@@ -7,24 +7,12 @@ esp8266:
   restore_from_flash: true
   early_pin_init: false
 
-logger:
-
-api:
-  encryption:
-    key: ${encryption_key}
-
-ota:
-  - platform: esphome
-    encryption:
-
-wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
-  ap:
-    ssid: ${friendly_name}
-    password: ${ap_password}
-
-captive_portal:
+packages:
+  logger: !include: logger.yaml
+  api: !include: api.yaml
+  ota: !include: ota.yaml
+  wifi: !include: wifi.yaml
+  captive_portal: !include: captive_portal.yaml
 
 binary_sensor:
   - platform: gpio
