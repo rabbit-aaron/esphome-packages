@@ -8,11 +8,11 @@ esp8266:
   early_pin_init: false
 
 packages:
-  logger: !include: logger.yaml
-  api: !include: api.yaml
-  ota: !include: ota.yaml
-  wifi: !include: wifi.yaml
-  captive_portal: !include: captive_portal.yaml
+  logger: !include logger.yaml
+  api: !include api.yaml
+  ota: !include ota.yaml
+  wifi: !include wifi.yaml
+  captive_portal: !include captive_portal.yaml
 
 binary_sensor:
   - platform: gpio
@@ -52,7 +52,7 @@ binary_sensor:
 switch:
   - platform: gpio
     name: "Switch 1"
-    id: light_1
+    id: switch_1
     pin: GPIO4
     restore_mode: RESTORE_DEFAULT_OFF
 

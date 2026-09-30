@@ -8,11 +8,11 @@ esp8266:
   early_pin_init: false
 
 packages:
-  logger: !include: logger.yaml
-  api: !include: api.yaml
-  ota: !include: ota.yaml
-  wifi: !include: wifi.yaml
-  captive_portal: !include: captive_portal.yaml
+  logger: !include logger.yaml
+  api: !include api.yaml
+  ota: !include ota.yaml
+  wifi: !include wifi.yaml
+  captive_portal: !include captive_portal.yaml
 
 binary_sensor:
   - platform: gpio
